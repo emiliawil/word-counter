@@ -10,12 +10,23 @@
   </head>
   <body>
     <div class="container">
-      <h1>Word Counter</h1>
-      <form action="wordcounter.php" method="post">
-        <textarea name="text" id="text" cols="30" rows="10"></textarea>
-      </form>
-      <h2>Words: <span id="wordCount">0</span></h2>
-      <h2>Characters: <span id="charCount">0</span></h2>
+      <header>
+        <h1>Word Counter</h1>
+      </header>
+      <main>
+        <form action="wordcounter.php" method="post">
+          <textarea name="text" id="text" cols="30" rows="10"></textarea>
+        </form>
+        <h3>
+          Words: <span id="wordCount">0</span> &emsp; Characters:
+          <span id="charCount">0</span>
+        </h3>
+      </main>
+      <footer>
+        <p>
+          Created by <a href="http://www.emiliawil.dev">Emilia Williamson</a>.
+        </p>
+      </footer>
     </div>
   </body>
 </html>

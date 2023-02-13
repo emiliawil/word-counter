@@ -1,3 +1,6 @@
+// Set wordcount goal
+var wordGoal = prompt("How many words do you want to write today?", "1000");
+
 // Word counter
 
 // Add event listener
@@ -6,7 +9,7 @@ document.getElementById("text").addEventListener("keyup", function () {
   var text = document.getElementById("text").value;
 
   // Split the text into words
-  var words = text.split(" ");
+  var words = text.split(/\s+/);
 
   // Remove empty strings
   words = words.filter(function (word) {
@@ -23,3 +26,8 @@ document.getElementById("text").addEventListener("keyup", function () {
   // Display the character count
   document.getElementById("charCount").innerHTML = charCount;
 });
+
+// Progress bar
+
+document.getElementById("progress").style.width =
+  (wordCount / wordGoal) * 100 + "%";
